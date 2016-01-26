@@ -89,8 +89,8 @@ def playGame( showAnswer ):
     upperLimit = int(input())
     print('How many times would you like to guess a number?')
     totalGuesses = int(input())
-    secretNumber = upperLimit
-    print('guess a number between 1 and the ' + str(upperLimit))
+    theNumber=generateNumber(upperLimit)
+    print('guess a number between 1 and the '+str(upperLimit))
     print('you have a total of ' + str(totalGuesses))
         
     # TO DO: ####################################################
