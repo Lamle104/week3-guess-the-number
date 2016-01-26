@@ -7,10 +7,16 @@ import random
 #   'topLimit' which is the top limit for the random number generator
 # the function returns the random number generated to its caller
 def generateNumber( topLimit ):
+
+    secretNumber = random.randint(1,topLimit)
+    return secretNumber
+
     # TO DO: ####################################################
     # Write code in this function that calculates and           #
     # returns a random number between 1 and the user's topLimit #
     #############################################################
+
+
 
 # end of generateNumber function -------------------------------------
 
@@ -43,6 +49,15 @@ def askUserToGuess( times, secretNumber ):
 #   the 'userGuess' parameter is the answer entered by the user
 #   the 'userSecretNumber' parameter is the randomly generated number
 def evaluateAnswer( userGuess, userSecretNumber ):
+    if userGuess < secretNumber:
+        print('Your guess is too low.')
+        return False
+    elif userguess > secretNumber:
+        print('Your guess is too high.')
+        return False
+    else:
+        return True
+        
     
     # TO DO: ####################################################
     # Write code in this function that compares userGuess and   #
@@ -55,6 +70,9 @@ def evaluateAnswer( userGuess, userSecretNumber ):
     #    return True, no message prints to the screen           #
     #############################################################
 
+
+
+
 # end of evaluateAnswer function -------------------------------------
 
 
@@ -66,6 +84,7 @@ def evaluateAnswer( userGuess, userSecretNumber ):
 #       False, we won't show the right answer on the screen
 def playGame( showAnswer ):
     
+        
     # TO DO: ####################################################
     # Write code in this function that                          #
     # 1. Greets the user                                        #
@@ -85,6 +104,8 @@ def playGame( showAnswer ):
     #############################################################
 
 
+
+
     # you don't need to change anything below this comment ##############
     # ///////////////////////////////////////////////////////////////////
     # this if statement allows us to show the hidden number to the user
@@ -96,3 +117,4 @@ def playGame( showAnswer ):
         print('Good job! You guessed my number!')
     else:
         print('Nope. The number I was thinking of was ' + str(theNumber))
+# end of playGame function -----------------------------------------
