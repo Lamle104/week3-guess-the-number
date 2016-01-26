@@ -1,3 +1,4 @@
+
 # Lam Le
 import random
 
@@ -49,10 +50,10 @@ def askUserToGuess( times, secretNumber ):
 #   the 'userGuess' parameter is the answer entered by the user
 #   the 'userSecretNumber' parameter is the randomly generated number
 def evaluateAnswer( userGuess, userSecretNumber ):
-    if userGuess < secretNumber:
+    if userGuess < userSecretNumber:
         print('Your guess is too low.')
         return False
-    elif userguess > secretNumber:
+    elif userGuess > userSecretNumber:
         print('Your guess is too high.')
         return False
     elif userGuess == userSecretNumber:
@@ -89,7 +90,7 @@ def playGame( showAnswer ):
     upperLimit = int(input())
     print('How many times would you like to guess a number?')
     totalGuesses = int(input())
-    theNumber=generateNumber(upperLimit)
+    theNumber=upperLimit
     print('guess a number between 1 and the '+str(upperLimit))
     print('you have a total of ' + str(totalGuesses))
         
