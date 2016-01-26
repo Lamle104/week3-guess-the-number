@@ -1,4 +1,4 @@
-# replace the contents of this comment with your name
+# Lam Le
 import random
 
 # -------------------------------------------------------------------
@@ -7,12 +7,11 @@ import random
 #   'topLimit' which is the top limit for the random number generator
 # the function returns the random number generated to its caller
 def generateNumber( topLimit ):
-    
     # TO DO: ####################################################
     # Write code in this function that calculates and           #
     # returns a random number between 1 and the user's topLimit #
     #############################################################
-    
+
 # end of generateNumber function -------------------------------------
 
 
@@ -97,4 +96,3 @@ def playGame( showAnswer ):
         print('Good job! You guessed my number!')
     else:
         print('Nope. The number I was thinking of was ' + str(theNumber))
-# end of playGame function -----------------------------------------
