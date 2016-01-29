@@ -1,4 +1,3 @@
-
 # Lam Le
 import random
 
